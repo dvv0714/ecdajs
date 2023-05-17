@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <h1 class="text-center mt-5">My Wallet</h1>
+
+  <div class="container-xl mt-4 ">
+    <div class="row d-flex justify-content-between px-2 py-2 bg-light rounded-3">
+      <div class="wallet col-lg-5 py-4">
+        <h3 class="text-center">My Wallet</h3>
+        <label class="w-100">
+          <p class="mb-1">Private Key</p>
+          <input id="private-key" class="private w-100 rounded-3 px-1 py-2" type="text" placeholder="type: 0x1">
+        </label>
+
+        <div class="mt-3 py-2">
+          <label class="w-100">
+            <p class="mb-0">Public Key:</p>
+            <input id="public-key" class="public w-100 rounded-3 px-1 py-2" readonly value="public key: 0x1..."
+              type="text">
+          </label>
+        </div>
+
+        <div class="border mt-3 py-2">
+          <p id="wallet-balance" class="mb-0">Balance:</p>
+        </div>
+      </div>
+      <div class="send_transaction col-lg-6 border py-4">
+        <h3 class="text-center">Send Transaction</h3>
+        <form>
+          <label class="w-100 mb-2">
+            <p class="mb-1">Send Amount</p>
+            <input id="amount" class="amount w-50 rounded-3 px-1 py-2" type="text" name="amount"
+              placeholder="type amount: 1,2,3...">
+          </label>
+
+          <label class="w-100">
+            <p class="mb-1">Recipient</p>
+            <input id="recip" class="recipient w-100 rounded-3 px-1 py-2" type="text"
+              placeholder="type an address, for example: 0x2" name="recipient">
+            <input id="prkey" value="" type="text" readonly hidden name="prkey">
+          </label>
+          <button id="transfer" class="w-100 btn btn-secondary mt-3">Transfer</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script type="module" src="./js/transaction.js"></script>
+</body>
+
+</html>

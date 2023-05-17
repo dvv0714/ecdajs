@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(176, 213, 234);
+}
+
+.wallet {
+  box-shadow: 5px 6px 20px 0px;
+  border-radius: 8px;
+}
+
+.private,
+.public,
+.amount,
+.recipient {
+  border: 2px solid #c1c1c1;
+}
+
+.public {
+  color: rgb(61, 57, 57);
+}
+
+.public:focus {
+  outline: none;
+}
+
+.send_transaction {
+  box-shadow: 0px 5px 20px 0px;
+  border-radius: 8px;
+}
